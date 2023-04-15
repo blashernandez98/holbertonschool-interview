@@ -13,6 +13,6 @@ def canUnlockAll(boxes):
         current_key = keys.pop(0)
         open_boxes[current_key] = True
         for k in boxes[current_key]:
-            if not open_boxes[k] and k not in keys:
+            if k < len(open_boxes) and not open_boxes[k] and k not in keys:
                 keys.append(k)
     return all(open_boxes)
