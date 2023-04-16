@@ -12,7 +12,7 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *cursor1 = *head, *cursor2 = *head;
-	listint_t *new = NULL, *aux = NULL;
+	listint_t *new = NULL;
 
 	if (!head)
 		return (NULL);
