@@ -18,7 +18,7 @@ int slide_line(int *line, size_t size, int direction)
         i = 1;
     else
         i = size - 2;
-    while (i >= 0 && i < size)
+    while (1)
     {
         if (line[i] == line[i + direction] && line[i] != 0)
         {
@@ -41,6 +41,8 @@ int slide_line(int *line, size_t size, int direction)
             line[i] = 0;
         }
         i += (direction * (-1));
+        if (i == 0 || i == size - 1)
+            break;
     }
     return (1);
 }
